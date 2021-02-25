@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Yrkou Artem M33071</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#Info">Общее</a></li>
+                    <li><a href="#Skills">Навыки</a></li>
+                    <li><a href="#Successes">Успехи</a></li>
+                    <li><a href="#Quote">Цитата</a></li>
+                    <li><a href="#Animal">Животное</a></li>
+                    <li><a href="#Code">Фрагмент кода</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <div class="navdiv" id="Info"></div>
+            <section>
+                <h2 > <b> Общее </b> </h2>
+                <div class="basic-text">
+                    <p>Адекватный и добрый человек белорус. </p>
+                    <p>Студент Санк-Петербургского Университета <b>ИТМО </b> с <time> 2017 </time> - <time> 2022 </time> - <em> Бакалавр </em> </p> 
+                </div>
+            </section>
+
+            <div class="navdiv" id="Skills"></div>
+            <section>
+                <h2><b> Навыки </b> </h2>
+                <div class="basic-text">
+                <ol>
+                    <li>
+                        <span>C++, Java, SQL</span> - около года в рамках учебного процесса университета.
+                    </li>
+                    <li>
+                        <b>Пройден курсы:</b> ООП, алгорититмы и структуры данных, операционные системы, БД, администрирование Windows/Linux
+                    </li> 
+                    <li>
+                        Английский язык - B2
+                    </li>
+                </ol>
+                </div>
+            </section>
+            
+            <div class="navdiv" id="Successes"></div>
+            <section>
+                <h2>Успешные проекты</h2>
+                <div class="basic-text">
+                <dl>
+                    <dt><a href=https://github.com/Varinara/big_int>
+                        Big_Int
+                    </a></dt>
+                    <dd>
+                        Структура Big_int Для C++
+                    </dd>
+                    <dt><a href="https://github.com/Varinara/TimePlugin">
+                        TimePlugin
+                    </a></dt>
+                    <dd>
+                        плагин для Visual Studio
+                    </dd>
+                    </dt>
+                </dl>
+                </div>
+            </section>
+
+            <div class="navdiv" id="Quote"></div>
+            <section>
+                <h2> Цитата </h2>
+                <div class="basic-text">
+                    <p>Вместе мы сможем отстоять свои права, вместе — мы сила! <sub> @Народ </sub> </p>
+                </div>
+            </section>
+            <div class="navdiv" id="Animal"></div>
+            <section>
+                <h2>Животное</h2>
+                <img id="image" src="fish.jpg" onClick="imgsrc();"/>
+                <script src="scriptSwap.js"></script>
+                 <pre>
+                      __ 
+                     /  ;  
+                 _.--"""-..   _.
+                /F         `-'  [
+               ]  ,    ,    ,    ;
+                '--L__J_.-"" ',_;
+                    '-._J
+                </pre>
+                </section>
+
+            <div class="navdiv" id="Code"></div>
+            <section>
+                <h2>Фрагмент Кода</h2>
+                <pre><code lang="C++">
+    big_integer &big_integer::operator*=(big_integer const &rhs) {
+    my_vector ans(this->data.size() + rhs.data.size(), 0);
+
+    for (size_t i = 0; i < this->data.size(); i++) {
+        ui carry = 0;
+        for (size_t j = 0; j < rhs.data.size() || carry; j++) {
+            ull cur = (ans[i + j]) + double_digit_cast(this->data[i]) * (int(j) < (int) rhs.data.size() ? rhs.data[j] : 0) + carry;
+            ans[i + j] = digit_cast(cur & MX_DIG);
+            carry = digit_cast(cur >> BASE_DEG);
+        }
+    }
+
+    *this = big_integer(ans, this->sign == rhs.sign);
+  
+    }</code></pre>
+        </main>
+        <footer>
+            <div id="okno">
+            <div><a href="https://vk.com/id289372740">vk</a></div>
+            <div><a href="https://github.com/Varinara">github</a></div>
+            <div>aay3000@mail.ru</div><br>
+             <a href="#" class="close">Закрыть окно</a>
+            </div>
+     
+            <center> <a href="#okno">Контактная информация</a> </center>
+        </footer>
+    </body>
+    <script src="script.js"></script>
+
+</html>
